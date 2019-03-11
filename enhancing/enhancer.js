@@ -1,3 +1,5 @@
+//production code
+
 module.exports = {
   succeed,
   fail,
@@ -14,9 +16,14 @@ function fail(item) {
 }
 
 function repair(item) {
-  return { ...item };
+  const repairItems = {
+      ...item,
+  durability: 100
+  }
+  return repairItems;
 }
 
+//optional- STRETCH
 function get(item) {
   return { ...item };
 }
