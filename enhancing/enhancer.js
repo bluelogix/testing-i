@@ -31,17 +31,18 @@ function fail(item) {
   if( e < 15) {
     return {
       ...item, 
-      d: d + 5
+      durability: d - 5
     }
-  } else if ( e > 15 ) {
+  } else if ( e === 15 ) {
     return {
       ...item,
-      d: d - 5
+      durability: d - 10
     }
-  } else if ( e > 16 ) {
+  } else if ( e >= 16 ) {
     return {
       ...item,
-      e: e--
+      durability: d - 10,
+      enhancement: --e 
     }
   }
   

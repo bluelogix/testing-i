@@ -32,6 +32,31 @@ describe('succeed()', () => {
     })
 })
 
+describe('fail()', () => {
+    it('should decrease by 5', () => {
+        const item = {
+            durability: 20,
+            enhancement: 14
+        }
+        expect(fail(item).durability).toBe(15)
+    })
+    it('durability should decrease by 10', () => {
+        const item = {
+            durability: 20,
+            enhancement: 15
+        }
+        expect(fail(item).durability).toBe(10)
+    })
+    it('enhancement decreases by 1', () => {
+        const item = {
+            durability: 20,
+            enhancement: 16
+        }
+        expect(fail(item).enhancement).toBe(15)
+        expect(fail(item).durability).toBe(10)
+    })
+})
+
 // The durability of the item is not changed.
 // When enhancement fails
 // If the item's enhancement is less than 15, the durability of the item is decreased by 5.
