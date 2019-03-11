@@ -20,7 +20,17 @@ describe('repair()', () => {
 // The item's enhancement increases by 1.
 // If the item enhancement level is 20, the enhancement level is not changed.
 
-
+describe('succeed()', () => {
+    it('should increase by one, maxed at level 20', () => {
+        const item = {
+            name: 'Name of Enhancement',
+            durability: 100,
+            enhancement: 15 
+        }
+        expect(succeed(item).enhancement).toBe(16);
+        expect(succeed(item).durability).toBe(100);
+    })
+})
 
 
 
