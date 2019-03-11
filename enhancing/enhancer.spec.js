@@ -23,7 +23,7 @@ describe('repair()', () => {
 describe('succeed()', () => {
     it('should increase by one, maxed at level 20', () => {
         const item = {
-            name: 'Name of Enhancement',
+            name: 'Lord of Enhancement',
             durability: 100,
             enhancement: 15 
         }
@@ -32,10 +32,6 @@ describe('succeed()', () => {
     })
 })
 
-
-
-
-
 // The durability of the item is not changed.
 // When enhancement fails
 // If the item's enhancement is less than 15, the durability of the item is decreased by 5.
@@ -43,4 +39,4 @@ describe('succeed()', () => {
 // If the item's enhancement level is greater than 16, the enhancement level decreases by 1 (17 goes down to 16, 18 goes down to 17).
 
 
-})
+}) //end describe
